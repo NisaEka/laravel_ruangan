@@ -24,12 +24,21 @@
                 @input_maker_create('name', ['type' => 'string'], $user)
             </div>
 
-            @include('user.meta')
+            <div class="mt-3">
+                @input_maker_label('NIM')
+                @input_maker_create('nim', ['type' => 'string'], $user)
+            </div>
 
             <div class="mt-3">
+                @input_maker_label('Telp.')
+                @input_maker_create('phone', ['type' => 'string'], $user)
+            </div>
+
+
+            <!-- <div class="mt-3">
                 @input_maker_label('Role')
                 @input_maker_create('roles', ['type' => 'relationship', 'model' => 'App\Models\Role', 'label' => 'label', 'value' => 'name'], $user)
-            </div>
+            </div> -->
 
             <div class="mt-4">
                 <a class="btn btn-secondary float-left" href="{{ URL::previous() }}">Cancel</a>

@@ -19,10 +19,20 @@
             @input_maker_create('name', ['type' => 'string'])
         </div>
 
-        <div class="col-md-12 mt-4">
+        <div class="col-md-12">
+            @input_maker_label('NIM')
+            @input_maker_create('nim', ['type' => 'string'])
+        </div>
+
+        <div class="col-md-12">
+            @input_maker_label('Phone')
+            @input_maker_create('phone', ['type' => 'string'])
+        </div>
+
+        <!-- <div class="col-md-12 mt-4">
             @input_maker_label('Role')
             @input_maker_create('roles', ['type' => 'relationship', 'model' => 'App\Models\Role', 'label' => 'label', 'value' => 'name'])
-        </div>
+        </div> -->
 
         <div class="col-md-12 mt-4">
             <a class="btn btn-secondary float-left" href="{{ url()->previous() }}">Cancel</a>

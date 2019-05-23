@@ -29,14 +29,20 @@
         @else
             <table class="table table-striped">
                 <thead>
+                    <th>Nim</th>
+                    <th>Nama</th>
                     <th>Email</th>
+                    <th>telp</th>
                     <th width="170px" class="text-right">Actions</th>
                 </thead>
                 <tbody>
                     @foreach($users as $user)
                         @if ($user->id !== Auth::id())
                             <tr>
+                                <td>{{ $user->nim }}</td>
+                                <td>{{ $user->name }}</td>
                                 <td>{{ $user->email }}</td>
+                                <td>{{ $user->phone }}</td>
                                 <td class="text-right">
                                     <div class="btn-toolbar justify-content-between">
                                         <a class="btn btn-outline-primary btn-sm mr-2" href="{{ url('admin/users/'.$user->id.'/edit') }}"><span class="fa fa-edit"></span> Edit</a>

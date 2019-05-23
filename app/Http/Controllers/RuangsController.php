@@ -55,6 +55,9 @@ class RuangsController extends Controller
      */
     public function store(RuangCreateRequest $request)
     {
+        $request->merge([
+            'status'=>'0',
+        ]);
         $result = $this->service->create($request->except('_token'));
 
         if ($result) {

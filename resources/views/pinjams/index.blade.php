@@ -1,10 +1,12 @@
-<div class="container">
+@extends('cms::layouts.dashboard')
 
-    <div class="">
-        {{ Session::get('message') }}
-    </div>
+@section('pageTitle') Peminjaman @stop
 
-    <div class="row">
+@section('content')
+<div class="container row">
+
+
+    <div class="col-md-12">
         <div class="pull-right">
             {!! Form::open(['route' => 'pinjams.search']) !!}
             <input class="form-control form-inline pull-right" name="search" placeholder="Search">
@@ -14,7 +16,7 @@
         <a class="btn btn-primary pull-right" style="margin-top: 25px" href="{!! route('pinjams.create') !!}">Add New</a>
     </div>
 
-    <div class="row">
+    <div class="col-md-12">
         @if($pinjams->isEmpty())
             <div class="well text-center">No pinjams found.</div>
         @else
@@ -48,3 +50,4 @@
         @endif
     </div>
 </div>
+@stop

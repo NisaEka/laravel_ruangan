@@ -15,7 +15,8 @@ class CreatePinjamsTable extends Migration
     {
         Schema::create('pinjams', function (Blueprint $table) {
             $table->increments('id');
-			$table->date('tanggal');
+            $table->datetime('pinjam');
+			$table->datetime('kembali');
 			$table->integer('user_id');
 			$table->integer('ruang_id');
 			$table->boolean('status');
