@@ -14,7 +14,8 @@ class Pinjam extends Model
 
     public $fillable = [
 		'id',
-		'tanggal',
+		'tanggal_pinjam',
+        'tanggal_kembali',
 		'user_id',
 		'ruang_id',
 		'status',
