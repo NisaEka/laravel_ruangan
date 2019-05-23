@@ -132,3 +132,27 @@ Route::post('mahasiswas/search', [
     'as' => 'mahasiswas.search',
     'uses' => 'MahasiswasController@search'
 ]);
+
+/*
+|--------------------------------------------------------------------------
+| Ruang Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::resource('ruangs', 'RuangsController', ['except' => ['show']]);
+Route::post('ruangs/search', [
+    'as' => 'ruangs.search',
+    'uses' => 'RuangsController@search'
+]);
+
+/*
+|--------------------------------------------------------------------------
+| Pinjam Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::resource('pinjams', 'PinjamsController', ['except' => ['show']]);
+Route::post('pinjams/search', [
+    'as' => 'pinjams.search',
+    'uses' => 'PinjamsController@search'
+]);
